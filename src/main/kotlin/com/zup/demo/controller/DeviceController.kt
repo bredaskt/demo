@@ -21,4 +21,14 @@ class DeviceController {
         return deviceService.saveDevice(device)
     }
 
+    @PutMapping("/device")
+    fun updateService(@RequestBody device: Device) : Device {
+        return deviceService.updateDevice(device)
+    }
+
+    @DeleteMapping("/device/{deviceId}")
+    fun deleteService(@PathVariable deviceId: Long) {
+        deviceService.removeDevice(deviceId)
+    }
+
 }

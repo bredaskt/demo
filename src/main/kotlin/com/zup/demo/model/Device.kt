@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue
 
 @Entity
 data class Device(
-    @Id @GeneratedValue val deviceId: Long?,
-    @Column (unique = true)val name: String,
-    val storage: Integer
-    )
+    @Id @GeneratedValue @javax.persistence.Id val deviceId: Long?,
+    @Column(unique = true) val name: String,
+    val storage: Int
+)
